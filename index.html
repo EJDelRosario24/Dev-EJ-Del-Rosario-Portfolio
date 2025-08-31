@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Empty HTML with Screen Size Display</title>
+  </head>
+  <body>
+    <header role="banner">
+      <!-- nav placeholder -->
+    </header>
+
+    <main id="main" role="main">
+      <!-- screen size info -->
+      <div id="screen-info"></div>
+    </main>
+
+    <footer role="contentinfo">
+
+
+    </footer>
+
+    <script>
+      const info = document.getElementById("screen-info");
+
+      function update() {
+        const w = window.innerWidth;
+        const h = window.innerHeight;
+        info.textContent = `Viewport Size: ${w}px × ${h}px`;
+      }
+
+      window.addEventListener("resize", update);
+      update();
+    </script>
+  </body>
+</html>
